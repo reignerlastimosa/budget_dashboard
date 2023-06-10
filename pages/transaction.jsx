@@ -4,7 +4,7 @@ import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs';
 import {GrMoney} from 'react-icons/gr'
 import Form from '../components/Form';
 import Header from '../components/Header';
-
+import { IoMdClose} from 'react-icons/io';
 
 const transaction = ({dark, showComponent, setShowComponent, dashboardValues, setDashboardValues, dashboardBalance}) => {
 
@@ -99,16 +99,25 @@ const transaction = ({dark, showComponent, setShowComponent, dashboardValues, se
           {
 
 showForm ?
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-200 h-200 flex items-center justify-center">
-  <div className="flex flex-col bg-blue-100 p-4">
-    <input type="text" placeholder="Name" name="expense_name" value={formValues.expense_name} onChange={handleInputChange} />
-    <input type="text" placeholder="Category" name="expense_category" value={formValues.expense_category} onChange={handleInputChange} />
-    <input type="text" placeholder="Expense" name="expense_amount" value={formValues.expense_amount} onChange={handleInputChange} />
-    <input type="date" placeholder="Expense" name="expense_date" value={formValues.expense_date} onChange={handleInputChange} />
+<div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 bg-blue-100 p-4 rounded-lg shadow-lg flex flex-col">
+  <button class="self-end text-gray-500" onClick={() => setShowForm(false)}>
+  <IoMdClose size={20}/>
+  </button>
+  <br/>
+  <input type="text" placeholder="Name" name="expense_name" value={formValues.expense_name} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  <input type="text" placeholder="Category" name="expense_category" value={formValues.expense_category} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  <input type="text" placeholder="Expense" name="expense_amount" value={formValues.expense_amount} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  <input type="date" placeholder="Expense" name="expense_date" value={formValues.expense_date} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
     
-    <button className="bg-red-100" onClick={handleSubmit}>Submit</button>
+  <div class="flex justify-center">
+    <button class="bg-[#64d281] text-white px-4 py-2 rounded-lg focus:outline-none">Submit</button>
   </div>
 </div>
+
+
+
+
+
 
 
   :
@@ -120,7 +129,7 @@ showForm ?
             {savedExpense.map((order, id) => (
                 <li key={id} className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'>
                     <div className='flex items-center'>
-                        <div className='bg-purple-100 p-3 rounded-lg'>
+                        <div className='bg-[#64d281] p-3 rounded-lg'>
                             <GrMoney className='text-purple-800' />
                         </div>
                         <p className='pl-4'>{order.expense_name}</p>
