@@ -39,8 +39,8 @@ const LabelCard = ({ savedExpense, dark, dashboardValues, dashboardBalance, setD
       </div>
       <div className={!dark ? 'bg-white flex justify-between w-full border p-4 rounded-lg' : 'bg-[#272741] flex justify-between w-full  p-4 rounded-lg text-white'}>
         <div className='flex flex-col w-full pb-4'>
-          <p className='text-2xl font-bold'>11,437</p>
-          <p className={!dark ? 'text-gray-600' :'text-white'}>Customers</p>
+          <p className='text-2xl font-bold'></p>
+          <p className={!dark ? 'text-gray-600' :'text-white'}></p>
         </div>
         
       </div>
