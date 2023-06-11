@@ -34,8 +34,8 @@ const Form = ({showComponent, setShowComponent, dashboardValues, setDashboardVal
   </button>
   {!showForm ? (
     <>
-      <label className={`${dark ? 'text-white text-lg' : 'text-black text-lg'}`}>Name: Reigner</label>
-      <label className={`${dark ? 'text-white text-lg' : 'text-black text-lg'}`}>Balance: P1,560</label>
+      <label className='text-black text-lg'>Name: Reigner</label>
+      <label className='text-black text-lg'>Balance: P1,560</label>
       <button className="bg-[#64d281] w-3/5	 mt-4 text-xl rounded-lg" onClick={() => setShowForm(true)}>Edit</button>
     </>
   ) : (

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { RxComponent1, RxMoon, RxSun, RxCalendar } from 'react-icons/rx';
-import { MdOutlineDashboard, MdOutlineWorkHistory } from "react-icons/md";
+import { MdOutlineWorkHistory } from "react-icons/md";
+import { AiOutlineHome} from "react-icons/ai";
 
-import { FiSettings } from 'react-icons/fi';
 
 const Sidebar = ({ children, dark, setDark}) => {
 
@@ -25,7 +25,7 @@ const Sidebar = ({ children, dark, setDark}) => {
           <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
           <Link href='/'>
             <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
-              <MdOutlineDashboard size={20} />
+              <AiOutlineHome size={20} />
             </div>
           </Link>
           <Link href='/transaction'>
