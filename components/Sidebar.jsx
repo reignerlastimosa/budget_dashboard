@@ -22,7 +22,7 @@ const Sidebar = ({ children, dark, setDark}) => {
               <RxComponent1 size={20} />
             </div>
           </Link>
-          <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
+          <span className=' w-full p-2'></span>
           <Link href='/'>
             <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
               <AiOutlineHome size={20} />

@@ -108,10 +108,10 @@ const Transaction = ({ dark, showComponent, setShowComponent, dashboardValues, s
                 <IoMdClose size={20} />
               </button>
               <br />
-              <input type="text" placeholder="Name" name="expense_name" value={formValues.expense_name} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="text" placeholder="Expense Name" name="expense_name" value={formValues.expense_name} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               <input type="text" placeholder="Category" name="expense_category" value={formValues.expense_category} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <input type="text" placeholder="Expense" name="expense_amount" value={formValues.expense_amount} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <input type="date" placeholder="Expense" name="expense_date" value={formValues.expense_date} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="text" placeholder="Cost" name="expense_amount" value={formValues.expense_amount} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="date" placeholder="Date" name="expense_date" value={formValues.expense_date} onChange={handleInputChange} class="w-full px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               <div class="flex justify-center">
                 <button class="bg-[#64d281] text-white px-4 py-2 rounded-lg focus:outline-none" onClick={handleSubmit}>Submit</button>
               </div>
