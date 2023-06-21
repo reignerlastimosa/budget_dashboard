@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
-
+import { RxComponent1 } from 'react-icons/rx';
 const Form = ({ showComponent, setShowComponent, dashboardValues, setDashboardValues, dark }) => {
   const [showForm, setShowForm] = useState(false);
   const [formValues, setFormValues] = useState({});
@@ -47,14 +47,19 @@ const Form = ({ showComponent, setShowComponent, dashboardValues, setDashboardVa
       </button>
       {!showForm ? (
         <>
+       
+      
+
           <label className="text-black text-lg">Name: {formValues.dashboard_name || 'None'}</label>
           <label className="text-black text-lg">Balance: {formValues.dashboard_balance || 'None'}</label>
           <button className="bg-[#64d281] w-3/5 mt-4 text-xl rounded-lg" onClick={() => setShowForm(true)}>
             Edit
           </button>
+          <p className="fixed bottom-5 left-0 w-full text-center text-gray-400">Made by Reigner and ChatGPT</p>
         </>
       ) : (
         <>
+        
           <input
             type="text"
             name="dashboard_name"
@@ -74,6 +79,8 @@ const Form = ({ showComponent, setShowComponent, dashboardValues, setDashboardVa
           <button className="bg-[#64d281] w-full px-4 py-2 rounded-lg" onClick={() => handleSubmit()}>
             Save
           </button>
+
+          <p className="fixed bottom-5 left-0 w-full text-center text-gray-400">Made by Reigner and ChatGPT</p>
         </>
       )}
     </div>
